@@ -1,0 +1,8 @@
+[entity]
+list = [
+    #    <source>@<entity_name>#< v + <version> | commit hash>
+    "local@entity#v0.1.0"
+]
+#list = "local@entity#v0.1.0"
+
+
