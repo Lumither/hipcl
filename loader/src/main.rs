@@ -1,5 +1,9 @@
 use std::env;
+#[cfg(unix)]
 use std::os::unix::net::SocketAddr;
+
+#[cfg(windows)]
+use uds_windows::SocketAddr;
 
 use crate::ems::load::get_entity_list;
 
