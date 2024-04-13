@@ -1,8 +1,12 @@
 use std::error::Error;
 use std::fs;
+#[cfg(unix)]
 use std::os::unix::net::{SocketAddr, UnixListener};
 use std::thread::sleep;
 use std::time::Duration;
+
+#[cfg(windows)]
+use uds_windows::{SocketAddr, UnixListener};
 
 use crate::ems::Entity;
 
